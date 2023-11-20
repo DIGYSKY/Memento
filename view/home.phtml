@@ -1,9 +1,32 @@
+<?php
+
+$query = 'SELECT * FROM post ORDER BY modified_at ASC';
+$response = $bdd->query($query);
+$datas = $response->fetchAll();
+
+function tab_post($datas) {
+    for ($i=0; $i < count($datas); $i++) {
+        echo '<tr>';
+        echo '</td>
+        <td>' . $datas[$i]['title'] . '</td>
+        <td>' . $datas[$i]['contents'] . '</td>';
+        echo '</tr>';
+    }
+    
+}
+
+?>
+
 <div class="title-page">
     <h1>MEMENTO</h1>
     <button>Add Post-it</button>
 </div>
 <div class="block-post-it">
     <div class="grid-post-it">
-        
+        <table>
+            <tr>
+                <?php tab_post($datas); $response->closeCursor();?>
+            </tr>
+        </table><br>
     </div>
 </div>
