@@ -46,7 +46,7 @@ body {
 /*  */
 
 .navlogo {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 
@@ -125,3 +125,29 @@ body {
   box-shadow: 0 0 2px #302f2f;
   background-color: rgb(237, 217, 5);
 }
+
+/* connexion */
+
+/* .connex form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.connex label {
+  display: block;
+  margin-top: 10px;
+}
+
+.connex input {
+  width: 90%;
+  padding: 10px;
+}
+
+.connex input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+} */

@@ -14,13 +14,20 @@ try
     die('Erreur : ' . $e->getMessage());
 }
 
-$aviableRouts = ['home', 'delete'];
+$aviableRouts = ['home', 'delete', 'account'];
 
 $route = 'home';
 
 
 if (isset($_GET['page']) && in_array($_GET['page'], $aviableRouts)) {
     $route = $_GET['page'];
+    if (isset($_SESSION['user']['connected']) && $_GET['page'] == 'account') {
+        if ($_SESSION['user']['connected']) {
+            $route = 'myaccount';
+        }
+    } else if ($_GET['page'] == 'account') {
+        $route = 'register';
+    }
 }
 
 require './view/layout.phtml';
