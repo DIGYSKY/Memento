@@ -6,11 +6,15 @@ $datas = $response->fetchAll();
 
 function tab_post($datas) {
     for ($i=0; $i < count($datas); $i++) {
-        echo '<tr>';
-        echo '</td>
-        <td>' . $datas[$i]['title'] . '</td>
-        <td>' . $datas[$i]['contents'] . '</td>';
-        echo '</tr>';
+        if ($datas[$i]['color'] != null) {
+            $color = $datas[$i]['color'];
+        } else {
+            $color = 'black';
+        }
+        echo '<p class"' . $i . '-title">' . $datas[$i]['title'] . '</p>';
+        echo '<br>';
+        echo '<p style="color: ' . $color . '">' . $datas[$i]['contents'] . '</p>';
+        echo '<br>';
     }
     
 }
@@ -23,10 +27,9 @@ function tab_post($datas) {
 </div>
 <div class="block-post-it">
     <div class="grid-post-it">
-        <table>
-            <tr>
-                <?php tab_post($datas); $response->closeCursor();?>
-            </tr>
-        </table><br>
+        <?php tab_post($datas); $response->closeCursor();?>
     </div>
+    <!-- <?php
+        var_dump($datas);
+    ?> -->
 </div>
