@@ -3,10 +3,13 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   font-family: 'Noto Sans', sans-serif;
 }
 
+body {
+  background-color: #7e7e7e;
+}
 
 /* navbar */
 .navbar {
@@ -73,5 +76,52 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  box-shadow: 0 0 5px #302f2f;
+  cursor: pointer;
 }
 
+.title-page button:hover {
+  background-color: bisque;
+}
+
+/* post-it */
+
+.block-post-it {
+  padding: 1em;
+}
+
+.grid-post-it {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	align-content: space-evenly;
+}
+
+.post-it {
+  width: 300px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	align-content: space-evenly;
+  padding: 1em;
+  margin: 1em;
+  background-color: yellow;
+  box-shadow: 0 0 5px #302f2f;
+}
+
+.post-it-title {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  box-shadow: 0 0 2px #302f2f;
+  background-color: rgb(237, 217, 5);
+}

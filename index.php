@@ -2,6 +2,7 @@
 
 session_start();
 
+// unset($_SESSION);
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=memento;charset=utf8','root','');
@@ -13,7 +14,7 @@ try
     die('Erreur : ' . $e->getMessage());
 }
 
-$aviableRouts = ['home'];
+$aviableRouts = ['home', 'delete'];
 
 $route = 'home';
 

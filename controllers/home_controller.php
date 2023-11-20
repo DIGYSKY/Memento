@@ -1,6 +1,6 @@
 <?php
 
-$query = 'SELECT * FROM post ORDER BY modified_at ASC';
+$query = 'SELECT * FROM post ORDER BY modified_at DESC';
 $response = $bdd->query($query);
 $datas = $response->fetchAll();
 
@@ -11,11 +11,12 @@ function tab_post($datas) {
         } else {
             $color = 'black';
         }
-        echo '<div>';
-        echo '<p class"' . $i . '-title">' . $datas[$i]['title'] . '</p>';
-        echo '<br>';
-        echo '<p style="color: ' . $color . '">' . $datas[$i]['contents'] . '</p>';
-        echo '<br>';
+        echo '<div class="post-it">';
+        echo '<div class="post-it-title">';
+        echo '<p class="title">' . $datas[$i]['title'] . '</p>';
+        echo '<a href="?page=delete&idDelete=' . $datas[$i]['id'] . '"><img src="./img/close.png" width="40px" alt="Delete post-it"></a>';
+        echo '</div>';
+        echo '<p style="color: ' . $color . '">' . nl2br($datas[$i]['contents']) . '</p>';
         echo '</div>';
     }
 }
