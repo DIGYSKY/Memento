@@ -4,6 +4,6 @@
 </div>
 <div class="block-post-it">
     <div class="grid-post-it">
-        <?php tab_post($datas);?>
+        <?php if (isset($_SESSION['user']['conected']) && $_SESSION['user']['conected']) {tab_post($datas);} ?>
     </div>
 </div>

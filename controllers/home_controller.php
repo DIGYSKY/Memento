@@ -1,9 +1,15 @@
 <?php
 
-$query = 'SELECT * FROM post ORDER BY modified_at DESC';
-$response = $bdd->query($query);
-$datas = $response->fetchAll();
-$response->closeCursor();
+if (isset($_SESSION['user']['conected']) && $_SESSION['user']['conected']) {
+    if ($_SESSION['user']['type'] == 'us') {
+        $query = 'SELECT * FROM post WHERE users_id = ' . $_SESSION['user']['id'] .' ORDER BY modified_at DESC';
+    } else if ($_SESSION['user']['type'] == 'su') {
+        $query = 'SELECT * FROM post ORDER BY modified_at DESC';
+    }
+    $response = $bdd->query($query);
+    $datas = $response->fetchAll();
+    $response->closeCursor();
+}
 
 function tab_post($datas) {
     for ($i=0; $i < count($datas); $i++) {
