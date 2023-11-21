@@ -21,5 +21,5 @@ function tab_post($datas) {
         echo '</div>';
     }
 }
-
+var_dump($_SESSION);
 require './view/home.phtml';

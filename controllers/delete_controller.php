@@ -13,11 +13,9 @@ $response->closeCursor();
 if ($_SESSION['user']['conected']) {
     if ($_SESSION['user']['type'] == 'su') {
         $delete = true;
-    }
-    if ($datas[$id]['droit'] == 'all') {
+    } else if ($datas[$id]['droit'] == 'null') {
         $delete = true;
-    }
-    if ($datas[$id]['droit'] == 'me' && $datas[$id]['user_create '] == $_SESSION['user']['name']) {
+    } else if ($datas[$id]['droit'] == 'me' && $datas[$id]['user_create '] == $_SESSION['user']['name']) {
         $delete = true;
     }
 }

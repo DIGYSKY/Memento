@@ -1,3 +1,7 @@
 <?php
 
-require './view/register.phtml';
+if ($_SESSION['user']['conected']) {
+    require './view/myaccont.phtml';
+} else {
+    require './view/register.phtml';
+}
