@@ -5,6 +5,11 @@ $_GET['idDelete'] = null;
 
 $delete = false;
 
+$query = 'SELECT * FROM post ORDER BY modified_at DESC';
+$response = $bdd->query($query);
+$datas = $response->fetchAll();
+$response->closeCursor();
+
 if ($_SESSION['user']['conected']) {
     if ($_SESSION['user']['type'] == 'su') {
         $delete = true;

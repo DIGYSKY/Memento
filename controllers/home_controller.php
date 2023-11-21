@@ -3,6 +3,7 @@
 $query = 'SELECT * FROM post ORDER BY modified_at DESC';
 $response = $bdd->query($query);
 $datas = $response->fetchAll();
+$response->closeCursor();
 
 function tab_post($datas) {
     for ($i=0; $i < count($datas); $i++) {

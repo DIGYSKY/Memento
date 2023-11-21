@@ -128,20 +128,26 @@ body {
 
 /* connexion */
 
-/* .connex form {
+.connex form {
   width: 300px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .connex label {
   display: block;
-  margin-top: 10px;
+  margin-top: 2em;
+  font-weight: bold;
 }
 
 .connex input {
   width: 90%;
   padding: 10px;
+  margin-top: 2em;
+  font-weight: bold;
 }
 
 .connex input[type="submit"] {
@@ -150,4 +156,5 @@ body {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-} */
+  margin-top: 2em;
+}
