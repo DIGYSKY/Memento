@@ -1,0 +1,21 @@
+<div class="connex">
+    <h1>Inscription</h1>
+    <form action="./controllers/newlogin_controller.php" method="post">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" value="<?php if (isset($_POST['email'])) {echo $_POST['email'];} ?>" autofocus>
+
+        <label for="name">Prénom</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="firstname">Nom</label>
+        <input type="text" name="firstname" id="firstname" required>
+
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" value="<?php if (isset($_POST['password'])) {echo $_POST['password'];} ?>" required>
+
+        <label for="passwordconf">Mot de passe</label>
+        <input type="password" name="passwordconf" id="passwordconf" required>
+
+        <input type="submit" value="S'enregistrer">
+    </form>
+</div>

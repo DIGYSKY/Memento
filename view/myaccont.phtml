@@ -1,0 +1,8 @@
+<?php echo '<h1>Bonjour, ' . $_SESSION['user']['name'] . ', ' . $_SESSION['user']['firstname'] . '</h1>'; ?>
+
+<div class="connex">
+    <form method="POST" action="./controllers/disconect_controller.php">
+        <!-- <input type="hidden" name="valeur" value="disconnect"> -->
+        <input type="submit" value="Deconnexion">
+    </form>
+</div>

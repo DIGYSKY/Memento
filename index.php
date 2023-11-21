@@ -14,16 +14,16 @@ try
     die('Erreur : ' . $e->getMessage());
 }
 
-$aviableRouts = ['home', 'delete', 'account'];
+$aviableRouts = ['home', 'delete', 'account', 'newregister'];
 
 $route = 'home';
 
 
 if (isset($_GET['page']) && in_array($_GET['page'], $aviableRouts)) {
     $route = $_GET['page'];
-    if (isset($_SESSION['user']['connected']) && $_GET['page'] == 'account') {
-        if ($_SESSION['user']['connected']) {
-            $route = 'myaccount';
+    if (isset($_SESSION['user']['conected']) && $_GET['page'] == 'account') {
+        if ($_SESSION['user']['conected']) {
+            $route = 'myaccont';
         }
     } else if ($_GET['page'] == 'account') {
         $route = 'register';
