@@ -50,18 +50,5 @@ $request->bindParam(':firstname', $firstname);
 $request->bindParam(':password', $password);
 $request->execute();
 
-// $query = "UPDATE users SET email = :email, name = :name, firstname = :firstname, password = :password WHERE id = :id";
-
-// try {
-//     $stmt = $bdd->prepare($query);
-//     $stmt->bindParam(':brand', $_POST['brand']);
-//     $stmt->bindParam(':name', $_POST['name']);
-//     $stmt->bindParam(':selling_price', $_POST['selling_price']);
-//     $stmt->bindParam(':id', $_POST['id']);
-//     $stmt->execute();
-// } catch (PDOException $e) {
-//     echo "<p>Erreur lors de l'exécution de la requête : " . $e->getMessage() . "</p>";
-// }
-
 header("Location: ../index.php?page=account");
 exit();

@@ -1,6 +1,7 @@
 <div class="title-page">
     <h1>MEMENTO</h1>
-    <button>Add Post-it</button>
+    <?php if (isset($_SESSION['user']['conected']) && $_SESSION['user']['conected']) {echo '<a href="?page=new"><button>Add Post-it</button></a>';} ?>
+    <?php if (!isset($_SESSION['user'])) {echo '<a href="?page=account"><button>Se connecter</button></a>';} ?>
 </div>
 <div class="block-post-it">
     <div class="grid-post-it">

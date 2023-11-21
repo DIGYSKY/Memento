@@ -1,0 +1,21 @@
+<div class="connex new">
+    <form action="" method="POST">
+   <?php echo '<input type="hidden" name="token" value="' . $_SESSION['user']['token'] . '">' ?>
+        <label for="title">Titre</label>
+        <input type="text" name="title" id="title" maxlength="20" autofocus require>
+
+        <label for="contents">Contenue</label>
+        <textarea name="contents" id="contents" cols="50" rows="10" maxlength="255" require></textarea>
+
+        <label for="color">Couleur</label>
+        <select name="color" id="color">
+            <option value="">Noir</option>
+            <option value="red">Rouge</option>
+            <option value="green">Vert</option>
+            <option value="blue">Bleu</option>
+            <option value="white">Blanc</option>
+        </select>
+
+        <input type="submit" value="Enregistrer">
+    </form>
+</div>

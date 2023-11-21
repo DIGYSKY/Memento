@@ -163,3 +163,25 @@ body {
   margin-bottom: 0;
   text-align: center;
 }
+
+.new textarea {
+  margin-top: 2em;
+}
+
+.new select {
+  margin-top: 2em;
+}
+
+.new select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.new select:focus {
+  outline: none;
+  border-color: #5b9dd9;
+  box-shadow: 0 0 5px #5b9dd9;
+}

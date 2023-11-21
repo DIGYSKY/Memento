@@ -2,9 +2,9 @@
 
 if (isset($_SESSION['user']['conected']) && $_SESSION['user']['conected']) {
     if ($_SESSION['user']['type'] == 'us') {
-        $query = 'SELECT * FROM post WHERE users_id = ' . $_SESSION['user']['id'] .' ORDER BY modified_at DESC';
+        $query = 'SELECT * FROM post WHERE users_id = ' . $_SESSION['user']['id'] .' ORDER BY modified_at ASC';
     } else if ($_SESSION['user']['type'] == 'su') {
-        $query = 'SELECT * FROM post ORDER BY modified_at DESC';
+        $query = 'SELECT * FROM post ORDER BY modified_at ASC';
     }
     $response = $bdd->query($query);
     $datas = $response->fetchAll();
@@ -27,5 +27,5 @@ function tab_post($datas) {
         echo '</div>';
     }
 }
-var_dump($_SESSION);
+
 require './view/home.phtml';
