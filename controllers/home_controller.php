@@ -10,7 +10,6 @@ if (isset($_SESSION['user']['conected']) && $_SESSION['user']['conected']) {
     $datas = $response->fetchAll();
     $response->closeCursor();
 }
-
 function tab_post($datas) {
     for ($i=0; $i < count($datas); $i++) {
         if ($datas[$i]['color'] != null) {
